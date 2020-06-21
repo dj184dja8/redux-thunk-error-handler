@@ -1,9 +1,9 @@
 {
-  "name": "redux-thunk-error-handler",
+  "name": "redux-thunk-with-error-handler",
   "version": "0.1.0",
   "license": "MIT",
   "description": "Thunk middleware for Redux with error handler.",
-  "repository": "github:dj184dja8/redux-thunk-error-handler",
+  "repository": "github:dj184dja8/redux-thunk-with-error-handler",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "src/index.d.ts",
