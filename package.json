@@ -1,19 +1,9 @@
 {
-  "name": "redux-thunk",
-  "version": "2.3.0",
+  "name": "redux-thunk-error-handler",
+  "version": "0.1.0",
   "license": "MIT",
-  "description": "Thunk middleware for Redux.",
-  "repository": "github:reduxjs/redux-thunk",
-  "bugs": "https://github.com/reduxjs/redux-thunk/issues",
-  "homepage": "https://github.com/reduxjs/redux-thunk",
-  "keywords": [
-    "redux",
-    "thunk",
-    "middleware",
-    "redux-middleware",
-    "flux"
-  ],
-  "author": "Dan Abramov <dan.abramov@me.com>",
+  "description": "Thunk middleware for Redux with error handler.",
+  "repository": "github:dj184dja8/redux-thunk-error-handler",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "src/index.d.ts",
