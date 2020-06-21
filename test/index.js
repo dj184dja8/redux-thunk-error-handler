@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import chai from 'chai';
 import { checkDirectory } from 'typings-tester';
 import thunkMiddleware from '../src/index';
@@ -5,7 +6,8 @@ import thunkMiddleware from '../src/index';
 describe('thunk middleware', () => {
   const doDispatch = () => {};
   const doGetState = () => {};
-  const nextHandler = thunkMiddleware({
+  const errorHandler = () => {};
+  const nextHandler = thunkMiddleware(errorHandler)({
     dispatch: doDispatch,
     getState: doGetState,
   });
@@ -75,7 +77,7 @@ describe('thunk middleware', () => {
   describe('handle errors', () => {
     it('must throw if argument is non-object', (done) => {
       try {
-        thunkMiddleware();
+        thunkMiddleware(errorHandler)();
       } catch (err) {
         done();
       }
@@ -85,7 +87,7 @@ describe('thunk middleware', () => {
   describe('withExtraArgument', () => {
     it('must pass the third argument', (done) => {
       const extraArg = { lol: true };
-      thunkMiddleware.withExtraArgument(extraArg)({
+      thunkMiddleware.withExtraArgument(extraArg)(errorHandler)({
         dispatch: doDispatch,
         getState: doGetState,
       })()((dispatch, getState, arg) => {
